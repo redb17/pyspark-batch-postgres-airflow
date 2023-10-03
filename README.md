@@ -1,7 +1,11 @@
 ## PySpark Batch Pipeline With Postgres As Source And Sink, Airflow and Alerts
 
-### Analytics Related To:
-[Educational DB](https://github.com/redb17/designing-educational-database-postgres)
+### Pipeline Flow:
+1. Airflow trigger job everyday.
+2. Source data from postgres tables with date=today filter.
+3. Calculating related metrics: [Educational DB](https://github.com/redb17/designing-educational-database-postgres).
+4. Writing metrics to postgres as sink.
+5. Email alert when job finishes.
 
 ### Email Alerts Settings In airflow.cfg
 ```conf
